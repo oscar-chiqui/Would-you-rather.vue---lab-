@@ -1,21 +1,19 @@
 <template>
+
   <div class="wyr">
 
     <h2>Please make your choice ! </h2>
 
-    <h3>{{question}}</h3>
+    <h3>{{question.question}}</h3>
 
-    <input type="radio" v-model="choice" v-bind:value="answer1" v-on:change="choiceMade">
-    <label>{{answer1}}</label>
+    <input type="radio" v-model="choice" v-bind:value="question.answer1" v-on:change="choiceMade">
+    <label>{{question.answer1}}</label>
 
-    <input type="radio" v-model="choice" v-bind:value="answer2" v-on:change="choiceMade">
-    <label>{{answer2}}</label>
+    <input type="radio" v-model="choice" v-bind:value="question.answer2" v-on:change="choiceMade">
+    <label>{{question.answer2}}</label>
  
-
-
-
-    
   </div>
+
 </template>
 
 
@@ -23,9 +21,7 @@
 export default {
   name: 'WouldYouRather',
   props: {
-    question: String,
-    answer1: String,
-    answer2: String,
+    question: Object
 
   },
   data() {
@@ -35,7 +31,7 @@ export default {
   },
   methods: {
     choiceMade () {
-      this.$emit('answer-changed', this.choice)
+      this.$emit('answer-changed', this.choice, this.question.id)  // Adding an extra property from the app.vue called question.id 
     }
   }
 }
@@ -58,7 +54,7 @@ ul {
 }
 li {
   display: inline-block;
-  margin: 0 10px;
+  margin: 0 10\px;
 }
 a {
   color: #42b983;
