@@ -3,7 +3,7 @@
 <!-- A link from the resource website  -->
 <div id="app">
   <p><a href="https://conversationstartersworld.com/would-you-rather-questions/would-you-rather-questions-for-kids/">Conversation Starters World !</a></p>
-  <h1>Would you rather</h1>  
+  <h1>Would you rather ? </h1>  
 
   <would-you-rather 
     v-for="question in questions"
@@ -15,7 +15,7 @@
 <!-- li for choices  and message as results   -->
   <li 
   v-for="choice in choicesMade">{{choice}}
-  
+
   <p><b>Thanks for participating, see you later !</b></p> 
   </li>   
 
@@ -39,20 +39,20 @@ export default {
       questions: [      // Questions is the return and the id's for each Would you rather "question"
         {
           id:0,
-          question: 'Would you rather travel to london or Tokyo?',  // first question ( answers)
+          question: '....travel to london or Tokyo?',  // first question ( answers)
           answer1: 'London',
           answer2: 'Tokyo'
 
         },
         {
           id:1,
-          question: 'Would you rather be batman or Superman ?',  // Second Question
+          question: '...be batman or Superman ?',  // Second Question
           answer1: 'Batman',
           answer2: 'Superman'
         },
         {
           id:2,
-          question: 'Would you rather control the fire or water ?', // Third question 
+          question: '...control the fire or water ?', // Third question 
           answer1: 'the fire',
           answer2: 'water'
         }

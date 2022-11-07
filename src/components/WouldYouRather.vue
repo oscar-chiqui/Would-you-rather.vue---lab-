@@ -2,7 +2,7 @@
 
   <div class="wyr">
 
-    <h2>Please make your choice ! </h2>
+    <h2>Would you rather.....  </h2>
 
     <h3>{{question.question}}</h3>
 
